@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/glenngreggs/dev/amdash/web/client/react-app/src'
+let g:netrw_dirhist_2='/Users/glenngreggs/dev/amdash/web/client/react-app'
+let g:netrw_dirhist_3='/Users/glenngreggs/dev/amdash/web/client/react-app/src'
+let g:netrw_dirhist_4='/Users/glenngreggs/dev/amdash/web/client/react-app/src/components'
