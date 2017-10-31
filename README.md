@@ -12,6 +12,11 @@ Switch to the `~/.vim` directory, and fetch submodules:
 
     cd ~/.vim
     git submodule update --init
+    
+## Adding new plugins
+
+    cd ~/.vim
+    git submodule add https://github.com/path/to/repo.git bundle/pluginname
 
 ## Color Schemes
 
