@@ -1,5 +1,6 @@
 call pathogen#infect()
 call pathogen#helptags()
 syntax on
-colorscheme 256-grayvim
+colorscheme peachpuff 
 set number
+autocmd vimenter * NERDTree
