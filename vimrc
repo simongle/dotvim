@@ -1,6 +1,12 @@
 call pathogen#infect()
 call pathogen#helptags()
 syntax on
-colorscheme peachpuff 
+set background=light
+colorscheme solarized 
 set number
-autocmd vimenter * NERDTree
+set tabstop=2
+"autocmd vimenter * NERDTree
+" Give a shortcut key to NERD Tree
+map <F2> :NERDTreeToggle<CR>
+" Enable search hilighting
+set hlsearch
