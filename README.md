@@ -1,4 +1,4 @@
-## Installation of Vim config
+# Installation of Vim config
 
 Installation:
 
