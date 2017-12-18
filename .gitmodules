@@ -23,5 +23,5 @@
 	path = bundle/vim-startify
 	url = https://github.com/mhinz/vim-startify.git
 [submodule "bundle/bundle/vim-airline-themes"]
-	path = bundle/bundle/vim-airline-themes
+	path = bundle/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
