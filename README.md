@@ -12,7 +12,11 @@ Switch to the `~/.vim` directory, and fetch submodules:
 
     cd ~/.vim
     git submodule update --init
-    
+
+Download Powerline fonts:
+		_needed for airline/vim-gutter_	
+		[powerline repo](https://github.com/powerline/fonts)
+
 ## Adding new plugins
 
     cd ~/.vim
