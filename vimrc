@@ -8,10 +8,12 @@ set number
 set tabstop=2
 set so=7 "set line offset from cursor when at bottom of screen
 set hlsearch 
+set backspace=indent,eol,start " backspace over everything in insert mode
 
 "ALE Linter settings
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
+let g:ale_lint_on_enter = 0
 
 " Enable fzf
 set rtp+=/usr/local/opt/fzf
