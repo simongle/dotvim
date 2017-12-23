@@ -25,3 +25,6 @@
 [submodule "bundle/bundle/vim-airline-themes"]
 	path = bundle/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule "/Users/glenngreggs/.vim/bundle/ack.vim"]
+	path = /Users/glenngreggs/.vim/bundle/ack.vim
+	url = https://github.com/mileszs/ack.vim.git
