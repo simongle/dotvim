@@ -10,6 +10,9 @@ set so=7 "set line offset from cursor when at bottom of screen
 set hlsearch 
 set backspace=indent,eol,start " backspace over everything in insert mode
 
+" enable filetype plugins, for NERDCommenter
+filetype plugin on
+
 " Better line joins
 if v:version > 703 || v:version == 703 && has('patch541')
   set formatoptions+=j
@@ -31,3 +34,6 @@ let g:airline#extensions#tabline#enabled = 1
 " Don't jump to first Ack result after query
 cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
+
+" Add space after comment for Nerd Commenter
+let g:NERDSpaceDelims = 1
