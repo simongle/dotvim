@@ -7,8 +7,22 @@ colorscheme solarized
 set number
 set tabstop=2
 set so=7 "set line offset from cursor when at bottom of screen
-set hlsearch 
 set backspace=indent,eol,start " backspace over everything in insert mode
+
+" incsearch mappings
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+
+" Mappings to only highlight search while searching
+set hlsearch
+let g:incsearch#auto_nohlsearch = 1
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
 
 " enable filetype plugins, for NERDCommenter
 filetype plugin on
@@ -22,6 +36,7 @@ endif
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 let g:ale_lint_on_enter = 0
+let g:ale_lint_on_save = 0
 
 " Enable fzf
 set rtp+=/usr/local/opt/fzf
