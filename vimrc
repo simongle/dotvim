@@ -3,11 +3,29 @@ call pathogen#helptags()
 syntax on
 set encoding=utf-8
 set background=light
-colorscheme solarized 
+colorscheme solarized
 set number
 set tabstop=2
+set shiftwidth=2
 set so=7 "set line offset from cursor when at bottom of screen
 set backspace=indent,eol,start " backspace over everything in insert mode
+
+" Keep visual selection after indenting
+vnoremap > >gv
+vnoremap < <gv
+
+" Map C-w to tab
+nnoremap <tab>   <c-w>w
+nnoremap <S-tab> <c-w>W
+
+" Autoclose quotes and brackets/parens
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
 
 " incsearch mappings
 map /  <Plug>(incsearch-forward)
@@ -52,3 +70,14 @@ nnoremap <Leader>a :Ack!<Space>
 
 " Add space after comment for Nerd Commenter
 let g:NERDSpaceDelims = 1
+
+" Highlight yanked lines
+if !exists('##TextYankPost')
+  map y <Plug>(highlightedyank)
+endif
+
+" Startify
+let g:startify_list_order = ['files', 'dir', 'bookmarks', 'sessions', 'commands']
+
+" Highlight JSDoc
+let g:javascript_plugin_jsdoc = 1

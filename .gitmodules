@@ -34,3 +34,6 @@
 [submodule "bundle/incsearch.vim"]
 	path = bundle/incsearch.vim
 	url = https://github.com/haya14busa/incsearch.vim
+[submodule "bundle/vim-highlightedyank"]
+	path = bundle/vim-highlightedyank
+	url = https://github.com/machakann/vim-highlightedyank.git
