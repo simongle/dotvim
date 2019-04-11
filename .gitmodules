@@ -37,3 +37,9 @@
 [submodule "bundle/vim-highlightedyank"]
 	path = bundle/vim-highlightedyank
 	url = https://github.com/machakann/vim-highlightedyank.git
+[submodule "vim-jsdoc"]
+	path = vim-jsdoc
+	url = https://github.com/heavenshell/vim-jsdoc
+[submodule "bundle/vim-jsdoc"]
+	path = bundle/vim-jsdoc
+	url = https://github.com/heavenshell/vim-jsdoc
