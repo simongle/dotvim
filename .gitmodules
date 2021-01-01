@@ -25,9 +25,6 @@
 [submodule "bundle/bundle/vim-airline-themes"]
 	path = bundle/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
-[submodule "/Users/glenngreggs/.vim/bundle/ack.vim"]
-	path = /Users/glenngreggs/.vim/bundle/ack.vim
-	url = https://github.com/mileszs/ack.vim.git
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
@@ -58,6 +55,3 @@
 [submodule "bundle/vim-elixer"]
 	path = bundle/vim-elixer
 	url = https://github.com/elixir-lang/vim-elixir.git
-[submodule "bundle/vim-jsx-pretty"]
-	path = bundle/vim-jsx-pretty
-	url = git@github.com:MaxMEllon/vim-jsx-pretty.git
