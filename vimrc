@@ -9,6 +9,7 @@ set tabstop=2
 set shiftwidth=2
 set so=7 "set line offset from cursor when at bottom of screen
 set backspace=indent,eol,start " backspace over everything in insert mode
+set autoindent
 
 " Keep visual selection after indenting
 vnoremap > >gv
@@ -19,13 +20,13 @@ nnoremap <tab>   <c-w>w
 nnoremap <S-tab> <c-w>W
 
 " Autoclose quotes and brackets/parens
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
+" inoremap " ""<left>
+" inoremap ' ''<left>
+" inoremap ( ()<left>
+" inoremap [ []<left>
+" inoremap { {}<left>
+" inoremap {<CR> {<CR>}<ESC>O
+" inoremap {;<CR> {<CR>};<ESC>O
 
 " incsearch mappings
 map /  <Plug>(incsearch-forward)
@@ -51,13 +52,24 @@ if v:version > 703 || v:version == 703 && has('patch541')
 endif
 
 "ALE Linter settings
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
-let g:ale_lint_on_enter = 0
-let g:ale_lint_on_save = 0
+" nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+" nmap <silent> <C-j> <Plug>(ale_next_wrap)
+" let g:ale_lint_on_enter = 0
+" let g:ale_lint_on_save = 0
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = '⚠'
+let g:ale_lint_on_text_changed = 'never'
 
 " Enable fzf
 set rtp+=/usr/local/opt/fzf
+
+" Mapping for file search with fzf
+nnoremap <silent> <C-f> :Files<CR>
+
+" Dont include filename results in Rg
+" (https://dev.to/iggredible/how-to-search-faster-in-vim-with-fzf-vim-36ko)
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
 " Airline
 let g:airline_powerline_fonts = 1
@@ -81,7 +93,24 @@ let g:startify_list_order = ['files', 'dir', 'bookmarks', 'sessions', 'commands'
 
 " Highlight JSDoc
 let g:javascript_plugin_jsdoc = 1
- 
 let g:jsdoc_enable_es6 = 1
 let g:jsdoc_allow_input_prompt = 1
 let g:jsdoc_input_description = 1
+
+" Code folding
+autocmd Syntax py,js,yml foldmethod=syntax
+autocmd Syntax py,js,yml normal zR
+
+" Correct indentation for yml files
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
+
+" Use markdown syntax hilighting for mdx files
+autocmd BufNewFile,BufRead *.mdx set syntax=markdown
+
+" Fugitive Conflict Resolution
+nnoremap <leader>gd :Gvdiff<CR>
+nnoremap gdh :diffget //2<CR>
+nnoremap gdl :diffget //3<CR>

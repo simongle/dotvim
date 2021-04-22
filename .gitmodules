@@ -55,3 +55,9 @@
 [submodule "bundle/vim-elixer"]
 	path = bundle/vim-elixer
 	url = https://github.com/elixir-lang/vim-elixir.git
+[submodule "bundle/vim-yaml-formatter"]
+	path = bundle/vim-yaml-formatter
+	url = git@github.com:tarekbecker/vim-yaml-formatter.git
+[submodule "bundle/fzf-vim"]
+	path = bundle/fzf-vim
+	url = git@github.com:junegunn/fzf.vim.git
