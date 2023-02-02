@@ -13,10 +13,10 @@ Switch to the `~/.vim` directory, and fetch submodules:
     cd ~/.vim
     git submodule update --init
 
-Download Powerline fonts:
-		_needed for airline/vim-gutter_	
+Download Powerline fonts for vim airline:
 		[powerline repo](https://github.com/powerline/fonts)
 
+Make sure to set powerline font in terminal settings (Noto Mono is a good one)
 ## Adding new plugins
 
     cd ~/.vim
@@ -42,5 +42,3 @@ To list colors, enter vim command mode and:
 To toggle between line numbers
   
     :set nu!
-
-## Next, add filename dependent line number display ::http://vim.wikia.com/wiki/Display_line_numbers::
